@@ -1,0 +1,31 @@
+1. FINANCIACIÓN BÁSICA	10 Capital	100 Capital Social
+	11 Reservas	113 Reservas Voluntarias
+	17 Deudas a largo plazo	170 Deudas a L/P con entidades de crédito
+---	---	---
+2. ACTIVO NO CORRIENTE	21 Inmovilizaciones Materiales	211 Construcciones
+		213 Maquinaria
+	28 Amortización Acumulada	281 Amortización acumulada del Inmovilizado Material
+---	---	---
+3. EXISTENCIAS	30 Comerciales	300 Mercaderías
+	31 Materias Primas	310 Materias Primas
+---	---	---
+4. ACREEDORES Y DEUDORES	40 Proveedores	400 Proveedores
+	43 Clientes	430 Clientes
+	47 Hacienda Pública y Organismos Públicos	472 H. P., IVA Soportado
+		477 H. P., IVA Repercutido
+---	---	---
+5. CUENTAS FINANCIERAS	52 Deudas a corto plazo	520 Deudas a C/P con entidades de crédito
+	57 Tesorería	570 Caja, €
+		572 Bancos e instituciones de crédito c/c vista, €
+---	---	---
+6. COMPRAS Y GASTOS	60 Compras	600 Compras de mercaderías
+	62 Servicios Exteriores	621 Arrendamientos y cánones
+		628 Suministros
+	64 Gastos de Personal	640 Sueldos y salarios
+---	---	---
+7. VENTAS E INGRESOS	70 Ventas de Mercaderías, Prestación de servicios	700 Ventas de mercaderías
+		705 Prestación de servicios
+	75 Otros Ingresos de Gestión	759 Ingresos por servicios diversos
+---	---	---
+8. Y 9. GASTOS E INGRESOS IMPUTADOS AL PATRIMONIO NETO	(Estas cuentas son usadas para ajustes directos al patrimonio y su uso es menos común en la operativa diaria de PYMEs)	830 Impuesto sobre beneficios
+		940 Ingresos por subvenciones, donaciones y legados

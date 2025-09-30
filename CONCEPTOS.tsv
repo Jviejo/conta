@@ -1,0 +1,19 @@
+FINANCIACIÓN	Bienes y derechos	21x / 430 / 57x	Activo	"Registro de compra de Maquinaria." / "Cobro de cliente."
+Deudas y obligaciones	17x / 400 / 52x	Pasivo	"Registro de préstamo a largo plazo." / "Deuda a proveedor."
+Recursos propios	10x / 11x	Patrimonio Neto	"Aporte de capital social." / "Dotación de reservas voluntarias."
+RESULTADOS	Aumento de patrimonio	70x	Ingreso	"Factura de venta de servicios F-12/25."
+Disminución de patrimonio	60x / 62x / 64x	Gasto	"Registro de compra de mercaderías." / "Sueldos y salarios."
+Pérdida de valor	68x	Gasto	"Asiento de Amortización Anual de Edificios."
+---	---	---	---	---
+GASTOS	Gasto de Alquiler	621 Arrendamientos y cánones	Gasto	"F. 23/A por alquiler mensual de la oficina de Diciembre."
+COMUNES	Gasto de Luz/Gas/Agua	628 Suministros	Gasto	"Pago por domiciliación de factura de luz del período 1-30 Nov."
+Gasto de Asesoría	623 Serv. de profesionales independientes	Gasto	"F. 77 Asesoría fiscal y legal del tercer trimestre."
+Gasto Salarial Bruto	640 Sueldos y salarios	Gasto	"Gasto Bruto de Salarios del personal (Nóminas de Enero)."
+Seg. Social a cargo Emp.	642 S.S. a cargo de la empresa	Gasto	"Cuota patronal de la S.S. del mes."
+DEUDAS Y	Líquido a pagar Nom.	465 Remuneraciones pendientes de pago	Pasivo	"Neto a pagar a los empleados por nóminas de Febrero."
+PENDIENTES	S.S. Total a pagar	476 O.S.S., acreedores	Pasivo	"Total (empresa+empleado) S.S. pendiente de ingresar."
+IRPF Retenido	4751 H.P., Acreedora por retenciones	Pasivo	"IRPF retenido en nóminas y en F. de asesoría, a ingresar a Hac."
+IVA Soportado (compras)	472 H.P., IVA Soportado	Activo	"Registro del IVA en F. de compra de material de oficina."
+IVA Repercutido (ventas)	477 H.P., IVA Repercutido	Pasivo	"Registro del IVA en F. de venta de mercaderías."
+
+Exportar a Hojas de cálculo
