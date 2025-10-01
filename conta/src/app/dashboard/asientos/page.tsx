@@ -1,13 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Asiento, Apunte, Concepto } from '@/types';
+import { Asiento, Apunte, Concepto, Ejercicio, Subconta } from '@/types';
 
 type AsientoWithApuntes = Asiento & { apuntes?: Apunte[] };
 
 export default function AsientosPage() {
   const [asientos, setAsientos] = useState<AsientoWithApuntes[]>([]);
   const [conceptos, setConceptos] = useState<Concepto[]>([]);
+  const [ejercicios, setEjercicios] = useState<Ejercicio[]>([]);
+  const [subcontas, setSubcontas] = useState<Subconta[]>([]);
   const [showForm, setShowForm] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [selectedAsiento, setSelectedAsiento] = useState<AsientoWithApuntes | null>(null);
@@ -25,6 +27,8 @@ export default function AsientosPage() {
   useEffect(() => {
     fetchAsientos();
     fetchConceptos();
+    fetchEjercicios();
+    fetchSubcontas();
   }, []);
 
   const fetchAsientos = async () => {
@@ -37,6 +41,18 @@ export default function AsientosPage() {
     const res = await fetch('/api/conceptos');
     const data = await res.json();
     setConceptos(data);
+  };
+
+  const fetchEjercicios = async () => {
+    const res = await fetch('/api/ejercicios');
+    const data = await res.json();
+    setEjercicios(data);
+  };
+
+  const fetchSubcontas = async () => {
+    const res = await fetch('/api/subcontas');
+    const data = await res.json();
+    setSubcontas(data);
   };
 
   const addApunte = () => {
@@ -180,27 +196,39 @@ export default function AsientosPage() {
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Año
                 </label>
-                <input
-                  type="number"
+                <select
                   value={asientoData.year}
                   onChange={(e) =>
                     setAsientoData({ ...asientoData, year: parseInt(e.target.value) })
                   }
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
                   required
-                />
+                >
+                  <option value="">Seleccionar año</option>
+                  {ejercicios.map((ejercicio) => (
+                    <option key={ejercicio._id?.toString()} value={ejercicio.year}>
+                      {ejercicio.year}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Subconta
                 </label>
-                <input
-                  type="text"
+                <select
                   value={asientoData.subconta}
                   onChange={(e) => setAsientoData({ ...asientoData, subconta: e.target.value })}
                   className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg dark:bg-gray-700 dark:text-white"
                   required
-                />
+                >
+                  <option value="">Seleccionar subconta</option>
+                  {subcontas.map((subconta) => (
+                    <option key={subconta._id?.toString()} value={subconta.id}>
+                      {subconta.id} - {subconta.nombre}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

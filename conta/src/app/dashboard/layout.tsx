@@ -31,29 +31,29 @@ export default function DashboardLayout({
             </li>
             <li>
               <Link
-                href="/dashboard/niveles"
+                href="/dashboard/buscador"
                 className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
               >
-                <span className="mr-3">📋</span>
-                Niveles
+                <span className="mr-3">🔍</span>
+                Buscador
               </Link>
             </li>
             <li>
               <Link
-                href="/dashboard/cuentas"
+                href="/dashboard/maestros/niveles"
                 className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
               >
-                <span className="mr-3">💼</span>
-                Cuentas
+                <span className="mr-3">📚</span>
+                Maestros
               </Link>
             </li>
             <li>
               <Link
-                href="/dashboard/conceptos"
+                href="/dashboard/plantillas-asientos"
                 className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
               >
-                <span className="mr-3">📝</span>
-                Conceptos
+                <span className="mr-3">📄</span>
+                Asientos por Plantilla
               </Link>
             </li>
             <li>
@@ -63,6 +63,60 @@ export default function DashboardLayout({
               >
                 <span className="mr-3">📊</span>
                 Asientos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/asientos-lista"
+                className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                <span className="mr-3">📑</span>
+                Listado Asientos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/facturas"
+                className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                <span className="mr-3">🧾</span>
+                Nueva Factura
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/facturas-lista"
+                className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                <span className="mr-3">📋</span>
+                Listado Facturas
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/saldos"
+                className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                <span className="mr-3">💰</span>
+                Saldos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/consulta-cuenta"
+                className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                <span className="mr-3">🔍</span>
+                Consulta Cuenta
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/dashboard/extracto"
+                className="flex items-center px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              >
+                <span className="mr-3">📄</span>
+                Extracto
               </Link>
             </li>
           </ul>
