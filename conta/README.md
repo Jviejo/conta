@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tipos
 
-## Getting Started
+``` 
+type Niveles = {
+    id: number;
+    nombre: string;
+}
 
-First, run the development server:
+type Cuenta = {
+    id: number;
+    nombre: string;
+}
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+type Subconta = {
+    id: number;
+    nombre: string;
+}
+
+type Nif = {
+    idCuenta: number;
+    nombre: string;
+    nif: string;
+    dir1: string;
+    dir2: string;
+    cp: string;
+    dir3: string;
+    dir4: string;
+}
+
+type Saldos = {
+    id: number;
+    year: number;
+    month: number;
+    debe: number;
+    haber: number;
+}
+
+type Asiento = {
+    id: number;
+    year: number;
+    subconta: string;
+    idAsiento: number;
+    date: Date;
+}
+
+type Concepto = {
+    id: number;
+    nombre: string;
+}
+// un asiento puede tener varios apuntes
+type Apunte = {
+    id: number;
+    year: number;
+    subconta: string;
+    idAsiento: number;
+    idApunte: number;
+    idCuentaDebe: number;
+    idCuentaHaber: number;
+    debe: number;
+    haber: number;
+    idConcepto: number;
+    descripcion: string;
+}
+// una factura puede tener varios apuntes
+// una factura puede tener varios iva
+type Factura = {
+    id: number;
+    tipo: "emitida" | "recibida";
+    idNif: number;
+    date: Date;
+    year: number;
+    subconta: string;
+    numero: string;
+    idAsiento: number;
+}
+
+type Iva = {
+    id: number;
+    year: number;
+    subconta: string;
+    idFactura: number;
+    base: number;
+    cuenta: number; // 477 repercutido 472 soportado
+    porcentaje: number; // 21% 10% 4% 
+    importe: number;
+}
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

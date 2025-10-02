@@ -1,7 +1,16 @@
 import { MongoClient } from 'mongodb';
 
-const uri = 'mongodb://localhost:27017';
+
+// Leer URI de MongoDB desde argumentos de línea de comandos o variable de entorno
+const args = process.argv.slice(2);
+const uriArg = args.find(arg => arg.startsWith('--mongodburi='));
+const uri = uriArg
+  ? uriArg.split('=')[1]
+  : process.env.MONGODB_URI || 'mongodb://localhost:27017';
+
 const dbName = 'conta2025';
+
+console.log(`📡 Conectando a: ${uri}`);
 
 // Función para generar número aleatorio entre min y max
 const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
