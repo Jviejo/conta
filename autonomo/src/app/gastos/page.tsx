@@ -83,10 +83,6 @@ export default function GastosPage() {
 
   const totalGastos = gastos.reduce((sum, g) => sum + g.importe, 0);
   const totalIvaDeducible = gastos.reduce((sum, g) => sum + g.ivaDeducible, 0);
-  const gastosPorClasificacion = gastos.reduce((acc, g) => {
-    acc[g.clasificacion] = (acc[g.clasificacion] || 0) + g.importe;
-    return acc;
-  }, {} as Record<string, number>);
 
   return (
     <div className="min-h-screen p-8">

@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     const data = await request.json();
     const db = await getDb();
 
-    const nuevoBien: BienInversion = {
+    const nuevoBien = {
       ...data,
       createdAt: new Date(),
       updatedAt: new Date(),

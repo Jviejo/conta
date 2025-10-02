@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     const data = await request.json();
     const db = await getDb();
 
-    const nuevoCliente: ClienteProveedor = {
+    const nuevoCliente = {
       ...data,
       tipo: 'cliente',
       fechaAlta: new Date(),

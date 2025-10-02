@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FacturaRecibida } from '@/types';
+import { FacturaRecibida, ClienteProveedor } from '@/types';
 import { Plus, Edit, Trash2, Search } from 'lucide-react';
 
 export default function FacturasRecibidasPage() {
@@ -9,7 +9,7 @@ export default function FacturasRecibidasPage() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [facturaEditar, setFacturaEditar] = useState<FacturaRecibida | undefined>();
   const [busqueda, setBusqueda] = useState('');
-  const [proveedores, setProveedores] = useState<any[]>([]);
+  const [proveedores, setProveedores] = useState<ClienteProveedor[]>([]);
 
   useEffect(() => {
     cargarDatos();

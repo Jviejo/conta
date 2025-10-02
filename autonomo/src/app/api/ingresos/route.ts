@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     const data = await request.json();
     const db = await getDb();
 
-    const nuevoIngreso: Ingreso = {
+    const nuevoIngreso = {
       ...data,
       createdAt: new Date(),
       updatedAt: new Date(),

@@ -4,13 +4,14 @@ import { ObjectId } from 'mongodb';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const db = await getDb();
     const bien = await db
       .collection('bienes_inversion')
-      .findOne({ _id: new ObjectId(params.id) });
+      .findOne({ _id: new ObjectId(id) });
 
     if (!bien) {
       return NextResponse.json(
@@ -31,16 +32,18 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const data = await request.json();
     const db = await getDb();
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { _id, ...updateData } = data;
 
     const result = await db.collection('bienes_inversion').updateOne(
-      { _id: new ObjectId(params.id) },
+      { _id: new ObjectId(id) },
       {
         $set: {
           ...updateData,
@@ -68,13 +71,14 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const db = await getDb();
     const result = await db
       .collection('bienes_inversion')
-      .deleteOne({ _id: new ObjectId(params.id) });
+      .deleteOne({ _id: new ObjectId(id) });
 
     if (result.deletedCount === 0) {
       return NextResponse.json(
